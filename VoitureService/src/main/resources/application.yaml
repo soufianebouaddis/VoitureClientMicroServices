@@ -1,0 +1,27 @@
+server:
+  port: 8084
+spring:
+  cloud:
+    discovery:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/voituredb?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: VOITURE-SERVICES
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka : true
+    service-url:
+      defaultZone: ${EUREKA_SERVER-ADDRESS:http://register-server:8761/eureka}
+
