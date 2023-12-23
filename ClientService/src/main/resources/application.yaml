@@ -1,26 +1,77 @@
-server:
-  port: 8083
+# server:
+#   port: 8083
+# spring:
+#   cloud:
+#     discovery:
+#       enabled: true
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/clientdb?createDatabaseIfNotExist=true
+#     username: root
+#     password: root
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#   application:
+#     name: CLIENT-SERVICES
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#     show-sql: true
+
+# eureka:
+#   instance:
+#     prefer-ip-address: true
+#   client:
+#     fetch-registry: true
+#     register-with-eureka : true
+#     service-url:
+#       defaultZone: ${EUREKA_SERVER-ADDRESS:http://register-server:8761/eureka}
+# server:
+#   port: 8083
+# spring:
+#   cloud:
+#     discovery:
+#       enabled: true
+#       service-name: client-services
+#   datasource:
+#     url: jdbc:mysql://localhost:3306/clientdb?createDatabaseIfNotExist=true
+#     username: root
+#     password: root
+#     driver-class-name: com.mysql.cj.jdbc.Driver
+#   application:
+#     name: client-services
+#   jpa:
+#     hibernate:
+#       ddl-auto: update
+#     show-sql: true
+
+# # Consul Configuration
+# spring.cloud.consul:
+#   host: localhost
+#   port: 8500
+#   discovery:
+#     service-name: client-services
+#     register: true
+#     health-check-path: /actuator/health
 spring:
   cloud:
     discovery:
       enabled: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery: CLIENT-SERVICES
+  application:
+    name: CLIENT-SERVICES
   datasource:
-    url: jdbc:mysql://localhost:3306/clientdb?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/Micro_ClientDB?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-  application:
-    name: CLIENT-SERVICES
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    fetch-registry: true
-    register-with-eureka : true
-    service-url:
-      defaultZone: ${EUREKA_SERVER-ADDRESS:http://register-server:8761/eureka}
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  port: 8090

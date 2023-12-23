@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiGatewayApplication<ApiGateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.vc.ApiGateway.ApiGatewayApplication",
+            "projectName": "ApiGateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientServiceApplication<ClientService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.vc.ClientService.ClientServiceApplication",
+            "projectName": "ClientService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-RegisterServiceApplication<RegisterService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.vc.RegisterService.RegisterServiceApplication",
+            "projectName": "RegisterService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-VoitureServiceApplication<VoitureService>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.vc.VoitureService.VoitureServiceApplication",
+            "projectName": "VoitureService",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

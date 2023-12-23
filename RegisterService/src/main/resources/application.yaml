@@ -1,13 +1,33 @@
-server:
-  port: 8761
+# server:
+#   port: 8761
 
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+# eureka:
+#   instance:
+#     hostname: localhost
+#   client:
+#     register-with-eureka: false
+#     fetch-registry: false
  
-spring:
-  application:
-    name: register-server
+# spring:
+#   application:
+#     name: register-server
+# spring:
+#   cloud:
+#     consul:
+#       host: localhost
+#       port: 8500
+# server:
+#   port: 8500
+
+# spring:
+#   application:
+#     name: consul-register-server
+
+# # Consul Configuration
+# spring.cloud.consul:
+#   host: localhost
+#   port: 8500
+#   discovery:
+#     service-name: consul-register-server
+#     register: true
+#     health-check-path: /actuator/health
